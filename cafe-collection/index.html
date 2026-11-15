@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Cafe Collection</h1>
+        <nav aria-label="Main navigation"><a href="#home">HOME</a><a href="#cafes">CAFES</a></nav>
+    </header>
+    <main id="home">
+
+        <!-- STEP 13-3：Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    DISCOVER • SAVE • ENJOY
+                </p>
+
+                <h2>Good Coffee,<br>Better Days.</h2>
+
+                <p class="hero-description">
+                    Discover beautiful cafes, save your favorites,
+                    and find your next perfect coffee spot.
+                </p>
+
+                <a href="#cafes" class="hero-button">
+                    Explore Cafes
+                </a>
+
+            </div>
+
+        </section>
+
+        <section id="add-cafe" class="panel">
+            <h2>Add a New Cafe</h2>
+            <form id="cafe-form">
+                <label for="cafe-input">Cafe Name</label>
+                <input id="cafe-input" type="text" placeholder="Enter cafe name" maxlength="100" required>
+                <label for="location-input">Location</label>
+                <input id="location-input" type="text" placeholder="e.g. Vancouver, BC" maxlength="120" required>
+                <label for="rating-input">Rating</label>
+                <select id="rating-input">
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+                <label for="image-input">Choose Image</label>
+                <select id="image-input">
+                    <option value="images/cafe.jpg">Cafe Interior</option>
+                    <option value="images/cafe2.jpg">Coffee &amp; Pastry</option>
+                </select>
+                <button type="submit">Add Cafe</button>
+            </form>
+        </section>
+        <section id="cafes">
+            <h2>My Cafes</h2>
+            <div class="filters">
+                <label for="search-input">Search cafes</label>
+                <input id="search-input" type="search" placeholder="Search by name or location">
+                <label for="filter-input">Filter</label>
+                <select id="filter-input">
+                    <option value="all">All cafes</option>
+                    <option value="favorites">Favorites only</option>
+                    <option value="five-stars">5-star cafes</option>
+                </select>
+            </div>
+            <p id="result-count" aria-live="polite"></p>
+            <div class="cafe-grid" id="cafe-grid"></div>
+            <p id="empty-message" hidden>No cafes found.</p>
+        </section>
+    </main>
+    <footer>Made with ☕ — Cafe Collection</footer>
+</body>
+
+</html>
